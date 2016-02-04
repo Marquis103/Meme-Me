@@ -14,16 +14,16 @@ class MemeTableViewController: UITableViewController {
 	private let reuseIdentifier = "memeTableCell"
 	
 	
-    var memes = [Meme]()
+	var memes = [Meme]()
 	
 	//MARK: ViewController Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addMeme")
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addMeme")
 		
 		navigationItem.leftBarButtonItem = editButtonItem()
-    }
+	}
 	
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
@@ -32,10 +32,10 @@ class MemeTableViewController: UITableViewController {
 		
 		navigationItem.leftBarButtonItem?.enabled = (memes.count > 0)
 	}
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+	
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+	}
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if segue.identifier == "showMeme" {
@@ -71,8 +71,8 @@ class MemeTableViewController: UITableViewController {
 	func addMeme() {
 		performSegueWithIdentifier("addNewMeme", sender: nil)
 	}
-
-    // MARK: - Table view data source
+	
+	// MARK: - Table view data source
 	override func setEditing(editing: Bool, animated: Bool) {
 		super.setEditing(editing, animated: animated)
 		if editing {
@@ -81,17 +81,17 @@ class MemeTableViewController: UITableViewController {
 			tableView.setEditing(false, animated: animated)
 		}
 	}
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return memes.count ?? 0
-    }
+	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+		return 1
+	}
 	
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MemeTableViewCell
-
+	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return memes.count ?? 0
+	}
+	
+	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MemeTableViewCell
+		
 		let meme = memes[indexPath.row]
 		
 		cell.memeImage.image = meme.memedImageIcon
@@ -106,9 +106,9 @@ class MemeTableViewController: UITableViewController {
 		
 		cell.memeTextLabel.text = (text.count > 0) ? text.joinWithSeparator("") : ""
 		cell.memeTextLabel.textAlignment = .Center
-
-        return cell
-    }
+		
+		return cell
+	}
 	
 	override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
 		if editingStyle == .Delete {

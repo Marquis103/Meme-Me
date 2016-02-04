@@ -16,7 +16,7 @@ class MemeViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+		memeImageView.contentMode = .ScaleAspectFit
 		memeImageView.image = (meme?.memedImage)!
 	}
 	

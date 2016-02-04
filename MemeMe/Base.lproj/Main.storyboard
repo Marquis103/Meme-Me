@@ -22,14 +22,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mEk-Bz-nsq">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mEk-Bz-nsq">
                                 <rect key="frame" x="20" y="76" width="560" height="15"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pl0-0w-3XC">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pl0-0w-3XC">
                                 <rect key="frame" x="20" y="507" width="560" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText"/>
@@ -53,7 +53,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="DxW-49-ebJ"/>
                                 </items>
                             </toolbar>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZf-7k-dqX" userLabel="Navigation Bar">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hZf-7k-dqX" userLabel="Navigation Bar">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="58"/>
                                 <items>
                                     <navigationItem id="V1z-O7-E9v">
@@ -98,7 +98,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Sxe-Ca-ckm"/>
                                 <exclude reference="j4U-pJ-uZH"/>
+                                <exclude reference="xgy-0b-nQt"/>
+                                <exclude reference="Gz9-TB-KxJ"/>
                             </mask>
                         </variation>
                     </view>
@@ -129,14 +132,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gEo-7z-MB1">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="gEo-7z-MB1" secondAttribute="trailing" id="77i-9J-fyu"/>
-                            <constraint firstItem="gEo-7z-MB1" firstAttribute="top" secondItem="d3z-Tj-YGv" secondAttribute="top" id="DEY-WT-8Y3"/>
-                            <constraint firstAttribute="bottom" secondItem="gEo-7z-MB1" secondAttribute="bottom" id="VVk-oT-T4m"/>
+                            <constraint firstItem="gEo-7z-MB1" firstAttribute="top" secondItem="FkZ-Bt-6bG" secondAttribute="bottom" id="LCd-3l-1DT"/>
+                            <constraint firstItem="gSE-tm-Fqm" firstAttribute="top" secondItem="gEo-7z-MB1" secondAttribute="bottom" id="WmV-wb-0zL"/>
                             <constraint firstItem="gEo-7z-MB1" firstAttribute="leading" secondItem="d3z-Tj-YGv" secondAttribute="leading" id="mKJ-17-Guy"/>
                             <constraint firstItem="gEo-7z-MB1" firstAttribute="bottom" secondItem="gSE-tm-Fqm" secondAttribute="top" id="mh3-nU-vmg"/>
                             <constraint firstItem="gEo-7z-MB1" firstAttribute="top" secondItem="d3z-Tj-YGv" secondAttribute="top" id="uIC-Kz-Dik"/>
