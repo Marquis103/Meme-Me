@@ -78,6 +78,8 @@ class MemeEditorViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		navigationBar.delegate = self
+		
 		setUpTextFields()
 		
 	}
@@ -302,5 +304,11 @@ extension UIImage {
 		UIGraphicsEndImageContext()
 		
 		return newImage
+	}
+}
+
+extension MemeEditorViewController : UINavigationBarDelegate {
+	func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
+		return .TopAttached
 	}
 }
