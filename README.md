@@ -3,13 +3,13 @@ Meme-Me is an app that allows users to create and share meme images.  The image 
 
 ![Alt text](https://github.com/Marquis103/Meme-Me/blob/master/MemedImage.png) ![Alt text](https://github.com/Marquis103/Meme-Me/blob/master/ShareMemedImage.png)
 
-##Getting Started
+## Getting Started
 Cloning the project and opening in XCode 7 is enough to get started working on this project.
 
-##Upcoming Work
+## Upcoming Work
 * Add functionality to meme videos
 * Play videos after selected in collection or tableview
 * Create icon of video meme
 
-##License
+## License
 Code released under the [MIT license](https://github.com/Marquis103/Meme-Me/blob/master/License)
